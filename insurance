@@ -38,7 +38,7 @@ reg_no varchar(10),
 report_num int,
 damage_amount int,
 primary key(driver_id,reg_no,report_num),
-foreign key(driver_id) references person(driver_id) on delete cascade,
+foreign key(driver_id) references person1(driver_id) on delete cascade,
 foreign key(reg_no) references car(reg_no) on delete cascade,
 foreign key(report_num) references accident(report_num) on delete cascade);
 
@@ -48,16 +48,16 @@ insert into accident values(13,'2003-01-21','Bull temple road');
 insert into accident values(14,'2008-02-17','Mysore Road');
 insert into accident values(15,'2004-03-05','Kanakpura Road');
 
-insert into person values('A01','Richard','Srinivas nagar');
-insert into person values('A02','Pradeep','Rajaji nagar');
-insert into person values('A03','Smith','Ashok nagar');
-insert into person values('A04','Venu','N R colony');
-insert into person values('A05','Jhon','Hanumanth nagar');
+insert into person1 values('A01','Richard','Srinivas nagar');
+insert into person1 values('A02','Pradeep','Rajaji nagar');
+insert into person1 values('A03','Smith','Ashok nagar');
+insert into person1 values('A04','Venu','N R colony');
+insert into person1 values('A05','Jhon','Hanumanth nagar');
 
-
-
-
-
-
+insert into car values('KA052250','Indica','');
+insert into car values('A02','Pradeep','Rajaji nagar');
+insert into car values('A03','Smith','Ashok nagar');
+insert into car values('A04','Venu','N R colony');
+insert into car values('A05','Jhon','Hanumanth nagar');
 
 
